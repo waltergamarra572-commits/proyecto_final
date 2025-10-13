@@ -1,120 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Document</title>
+
+     
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    
+
+   
+
+    <title>Walter Gamarra Portfolio</title>
 </head>
+
 <body>
     <header>
         <div class="contenedor_header">
             <img src="imagenes/Logo2.png" alt="">
-                <nav>
-                    <ul>
-                        <li><a href="Estructura">Estructura</a></li>
-                        <li><a href="Armonía">Armonía</a></li>
-                        <li><a href="Ritmo">Ritmo</a></li>
-                        <li><a href="Afinación">Afinación</a></li>
-                    </ul>
-                </nav>
-        </div>      
+            <nav>
+                <ul>
+                    <li><a href="#Estructura">Estructura</a></li>
+                    <li><a href="#Armonía">Armonía</a></li>
+                    <li><a href="#Ritmo">Ritmo</a></li>
+                    <li><a href="#Afinación">Afinación</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
-    <section id="section_lineas">
-        <div class="para_lineas">
-            <hr> <br> <br>
-            <hr> <br> <br>
-            <hr> <br> <br>
-            <hr> <br> <br>
-            <hr> <br> <br>
-        </div>   
-    </section>
+    <main>
+
+        <svg viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path class="line l1" d="M0,120 Q600,120 1200,120" />
+            <path class="line l2" d="M0,220 Q600,220 1200,220" />
+            <path class="line l3" d="M0,320 Q600,320 1200,320" />
+            <path class="line l4" d="M0,420 Q600,420 1200,420" />
+            <path class="line l5" d="M0,520 Q600,520 1200,520" />
+
+        </svg>
+
+        <h1>
+            <span>La</span><br>
+            <span>armonía</span><br>
+            <span>del</span><br>
+            <span>código</span>
+        </h1>
+
+        <span class="tag t1">#id</span>
+        <span class="tag t2">&lt;div&gt;</span>
+        <span class="tag t3">}</span>
+        <span class="tag t4">&lt;a&gt;</span>
+        <span class="tag t5">&lt;html&gt;</span>
+        <span class="tag t6">{</span>
+        <span class="tag t7">&lt;p&gt;</span>
+    </main>
 
     <section id="html">
-        <div class="titulo_html ">
-        <h2><a href="HTML">HTML <br> Como Estructura</a></h2>
-        </div>
-        <div><img class="img_html" src="imagenes/html.jpeg"alt="">
-        </div>
-            <div>
-            <p class="texto_html">En la música, una partitura marca la base: las notas, los compases, la métrica. No tiene adornos, pero define qué se toca y cuándo.
-De la misma forma, HTML es el esqueleto de una página web: define la jerarquía de títulos, párrafos, secciones y enlaces.
+        <div class="html_contenedor">
+            <div class="textos_html">
 
-➡️ Así como un músico necesita una buena partitura para que la interpretación tenga sentido, un desarrollador necesita un HTML limpio, semántico y ordenado para que la web sea clara, accesible y fácil de mantener.</p>
-            </div>
-            </section>
+                <h2>HTML Como Estructura</h2>
 
 
-            
-    <section id="css">
-        <div class="contenedor_css">
-            </div>
-            <div>
-                <h2> <a href="css">CSS como armonía y estilo</a></h2>
-            </div>
-            <div>
-                <img src="imagenes/css.jpeg" alt="">
-            </div>
-            <div>
-                <p class="texto_css">  Si HTML es la partitura, el CSS es la interpretación con matices: la elección del tempo, la dinámica (piano, forte), la expresividad y el color sonoro de un instrumento.
-CSS trae la armonía visual, define colores, tipografías, tamaños y distribuciones que convierten un simple esqueleto en una experiencia estética.
-
-➡️ Así como una melodía cambia totalmente si se toca con un violín suave o con una batería estridente, un sitio web cambia radicalmente según los estilos de CSS aplicados. Es la personalidad y la emoción visual de tu página.
+                <p>En la música, una partitura marca la base: las notas, los compases, la métrica. No tiene adornos,
+                    pero define qué se toca y cuándo.
+                    De la misma forma, HTML es el esqueleto de una página web: define la jerarquía de títulos, párrafos,
+                    secciones y enlaces. <br>
+                    <br>
+                    ➡️ Así como un músico necesita una buena partitura para que la interpretación tenga sentido, un
+                    desarrollador necesita un HTML limpio, semántico y ordenado para que la web sea clara, accesible y
+                    fácil de mantener
                 </p>
+
+            </div>
+
+            <div class="img_html">
+                <img src="imagenes/html.jpeg" alt="">
             </div>
         </div>
     </section>
 
 
-
+    <section id="css">
+        <div class="contenedor_css">
+            <div class="texto_css">
+                <h2>CSS como armonía y estilo</h2>
+                <p> Si HTML es la partitura, el CSS es la interpretación con matices: la elección del
+                    tempo, la dinámica (piano, forte), la expresividad y el color sonoro de un instrumento.
+                    CSS trae la armonía visual, define colores, tipografías, tamaños y distribuciones que convierten un
+                    simple esqueleto en una experiencia estética. <br> <br>
+                    ➡️ Así como una melodía cambia totalmente si se toca con un violín suave o con una batería
+                    estridente, un sitio web cambia radicalmente según los estilos de CSS aplicados. Es la personalidad
+                    y la emoción
+                    visual de tu página.
+                </p>
+            </div>
+            <div class="img_css">
+                <img src="imagenes/css.jpeg" alt="">
+            </div>
+        </div>
+    </section>
 
 
     <section id="javascript">
         <div class="contenedor_javascript">
-            <div>
-                <h2><a href="JavaScript">JavaScript <br> Como Ritmo y Funcionalidad</a></h2>
-
+            <div class="texto_javascript">
+                <h2>JavaScript <br> Como Ritmo y Funcionalidad</h2>
+                <p> En la música, el ritmo y la percusión aportan movimiento y hacen que la
+                    obra avance. <br>
+                    En programación, JavaScript (y también Java en ciertos contextos) cumplen ese papel: agregan la
+                    interactividad que mantiene viva la experiencia del usuario. <br>
+                    <br>
+                    ➡️ Botones que responden, menús dinámicos, animaciones que fluyen, validación de formularios… todo
+                    eso es el “pulso” que da vida a una página.
+                    Así como un metrónomo marca el compás y da coherencia al ensamble, el código aporta lógica y
+                    dinamismo.
+                </p>
             </div>
-            <div>
+            <div class="img_javascript">
                 <img src="imagenes/JavaScript.jpeg" alt="">
             </div>
-            <div>
-                <p class="texto_javascript"> En la música, el ritmo y la percusión aportan movimiento y hacen que la obra avance.
-En programación, JavaScript (y también Java en ciertos contextos) cumplen ese papel: agregan la interactividad que mantiene viva la experiencia del usuario.
-➡️ Botones que responden, menús dinámicos, animaciones que fluyen, validación de formularios… todo eso es el “pulso” que da vida a una página.
-Así como un metrónomo marca el compás y da coherencia al ensamble, el código aporta lógica y dinamismo.</p>
-            </div>
         </div>
     </section>
 
+    <section>
+        <div class="contenedor_qa">
+            <div class="texto_qa">
+                <h2>QA Como Afinación</h2>
+                <p class="texto_qa"> Un instrumento puede estar afinado técnicamente, pero si no se revisa antes de
+                    tocar, puede sonar desagradable.
+                    El QA (Quality Assurance) en programación es exactamente eso: afinar el código antes de ponerlo en
+                    escena. <br>
 
-
-    <section id="qa">
-
-        <div  class="contenedor_qa">
-            <div>
-                <h2>
-                    <a href="QA Como Afinación">QA Como Afinación</a>
-                </h2>
+                    <br> ➡️ Revisar errores, probar funcionalidades, asegurar compatibilidad en diferentes dispositivos
+                    y
+                    navegadores es como afinar cada cuerda antes del concierto.
+                    Una página puede “funcionar” sin QA, pero al igual que una orquesta desafinada, no transmitirá la
+                    calidad ni la emoción que debería.
+                </p>
             </div>
-        <div>
+            <div class="img_qa">
                 <img src="imagenes/css.jpeg" alt="">
+            </div>
         </div>
-        <div>
-            <p class="texto_qa"> Un instrumento puede estar afinado técnicamente, pero si no se revisa antes de tocar, puede sonar desagradable.
-El QA (Quality Assurance) en programación es exactamente eso: afinar el código antes de ponerlo en escena.
-➡️ Revisar errores, probar funcionalidades, asegurar compatibilidad en diferentes dispositivos y navegadores es como afinar cada cuerda antes del concierto.
-Una página puede “funcionar” sin QA, pero al igual que una orquesta desafinada, no transmitirá la calidad ni la emoción que debería.
-            </p>
-        </div>
-        </div>    
     </section>
-    
+
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imagenes/img_bootstrap/spinetta (1).jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/img_bootstrap/spinetta (3).jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/img_bootstrap/spinetta (2).jpeg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+    <div class="logo-slider">
+        <div class="slide-track">
+            <div class="slide"><img src="imagenes/imagenes_slider/java.svg" alt="Java"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/html5.svg" alt="HTML5"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/css3.svg" alt="CSS3"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/js.svg" alt="JS"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/github.svg" alt="GitHub"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/postman.svg" alt="Postman"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/k6.svg" alt="k6"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/lighthouse.svg" alt="Lighthouse"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/pagespeed.svg" alt="Pagespeed"></div>
+
+            <!-- Repetimos para loop continuo -->
+            <div class="slide"><img src="imagenes/imagenes_slider/java.svg" alt="Java"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/html5.svg" alt="HTML5"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/css3.svg" alt="CSS3"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/js.svg" alt="JS"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/github.svg" alt="GitHub"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/postman.svg" alt="Postman"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/k6.svg" alt="k6"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/lighthouse.svg" alt="Lighthouse"></div>
+            <div class="slide"><img src="imagenes/imagenes_slider/pagespeed.svg" alt="Pagespeed"></div>
+
+        </div>
+    </div>
     <footer>
         <p>Todos los derechos reservados</p>
     </footer>
-    
+    <script>
+        // === ENTRADAS ANIMADAS ===
+        gsap.from("h1 span", {
+            y: 80,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out",
+            stagger: 0.2
+        });
 
+        gsap.from(".tag", {
+            opacity: 0,
+            y: -20,
+            duration: 1,
+            delay: 0.6,
+            stagger: 0.15
+        });
+
+        // === INTERACCIÓN CON EL MOUSE ===
+        const lines = document.querySelectorAll(".line");
+        const svg = document.querySelector("svg");
+
+        svg.addEventListener("mousemove", e => {
+            const rect = svg.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            lines.forEach((line, i) => {
+                const baseY = 120 + i * 100; // posiciones base de las líneas
+                const curveHeight = 30; // amplitud máxima
+                const dist = Math.abs(y - baseY);
+                const influence = Math.max(0, 1 - dist / 400);
+                const midY = baseY - curveHeight * influence;
+
+                line.setAttribute("d", `M0,${baseY} Q${x},${midY} 1200,${baseY}`);
+            });
+        });
+
+        // === PARPADEO SUAVE DE ETIQUETAS ===
+        gsap.utils.toArray(".tag").forEach(tag => {
+            gsap.to(tag, {
+                opacity: 0.4,
+                duration: 1.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                delay: Math.random() * 2
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
+
 </html>

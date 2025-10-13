@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: tomato;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header img {
+    width: 15%;
+}
+
+header nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 15px;
+}
+.para_lineas{
+    margin: 50px;
+    background-color: white;
+}
+
+/* ---------------------------------------------------- */
+#section_lineas {
+    background-color: white;
+}
+
+section div .para_lineas {
+    height: 153px;
+    margin: 100px;
+}
+
+section div hr {
+    color: yellow;
+}
+
+/*------------------------------------------------ */
+
+
+ .html_contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: tomato;
+}
+#html img{
+    max-width: 60%;
+}
+.img_html{
+    align-content:end;
+}
+.textos_html h2 , p{
+    color: white;
+    text-align: center;
+
+
+
+/*------------------------------------------------*/
+
+
+.contenedor_css {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+#css img {
+    max-width: 100%;
+}
+
+#css h2 a {
+    text-align: center;
+    color: white;
+}
+
+.texto_css {
+    text-align: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+
+/*------------------------------------------------*/
+
+#javascript .contenedor_javascript {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#javascript img {
+    max-width: 100%;
+}
+
+#javascript .texto_javascript {
+    color: white;
+    text-align: center;
+}
+
+#javascript h2,
+a {
+    text-align: center;
+    color: white;
+}
+
+#javascript div {
+    display: flex;
+    justify-content: center;
+    /* centra horizontalmente 
+    align-items: center;
+}
+
+
+/*------------------------------------------------*/
+#qa .contenedor_qa {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#qa img {
+    max-width: 100%;
+}
+
+#qa .texto_qa {
+    color: white;
+    text-align: center;
+}
+
+#qa div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-------------------------------------------------------*/
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    height: 100px;
+    align-items: center;
+    background-color: white;
+}
+
+footer p {
+    color: black;
+}
+}
+}

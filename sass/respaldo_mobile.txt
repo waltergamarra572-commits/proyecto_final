@@ -1,0 +1,408 @@
+body {
+    background-color: black;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header img {
+    width: 15%;
+}
+
+header nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+/* ---------------------------------------------------- */
+#section_lineas {
+    background-color: white;
+}
+
+section div .para_lineas {
+    height: 153px;
+    margin: 100px;
+}
+
+section div hr {
+    color: yellow;
+}
+
+/*------------------------------------------------ */
+/*
+#html .html_contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#html img {
+    max-width: 100%;
+}
+
+#html h2 {
+    text-align: center;
+}
+
+#html h2 a {
+    color: white;
+}
+
+#html .texto_html {
+    color: white;
+    text-align: center;
+}
+
+#html div {
+    display: flex;
+    justify-content: center;
+    /* centra horizontalmente 
+    align-items: center;
+     centra verticalmente 
+}*/
+
+#html .html_contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+#html img {
+  max-width: 100%;
+  height: auto;
+}
+
+#html h2 {
+  text-align: center;
+}
+
+#html h2 a {
+  color: white;
+  text-decoration: none;
+}
+
+#html .texto_html {
+  color: white;
+  text-align: center;
+}
+
+#html div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+   @media (min-width: 768px) {
+  #html .html_contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    grid-template-areas:
+      "titulo imagen"
+      "texto  imagen";
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: tomato;
+  }
+
+  /* Áreas definidas en el grid */
+  #html .titulo_html {
+    grid-area: titulo;
+    text-align: center;
+    align-items: center;
+  }
+
+  #html .texto_html {
+    grid-area: texto;
+  }
+
+  #html img {
+    grid-area: imagen;
+    width: 100%;
+    max-width: 450px;
+    justify-content: center;
+  }
+
+  #html .titulo_html h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  #html .texto_html {
+    font-size: 1rem;
+    padding-right: 20px;
+  }
+}
+
+
+/*------------------------------------------------*/
+
+
+#css {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+#css img {
+    max-width: 100%;
+}
+
+#css h2 a {
+    text-align: center;
+    color: white;
+}
+
+#css .texto_css {
+    color: white;
+    text-align: center;
+}
+
+#css div {
+    display: flex;
+    justify-content: center;
+    /* centra horizontalmente */
+    align-items: center;
+}
+
+/*------------------------------------------------*/
+
+#javascript .contenedor_javascript {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#javascript img {
+    max-width: 100%;
+}
+
+#javascript .texto_javascript {
+    color: white;
+    text-align: center;
+}
+
+#javascript h2,
+a {
+    text-align: center;
+    color: white;
+}
+
+#javascript div {
+    display: flex;
+    justify-content: center;
+    /* centra horizontalmente */
+    align-items: center;
+}
+
+
+/*------------------------------------------------*/
+#qa .contenedor_qa {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#qa img {
+    max-width: 100%;
+}
+
+#qa .texto_qa {
+    color: white;
+    text-align: center;
+}
+
+#qa div {
+    display: flex;
+    justify-content: center;
+    /* centra horizontalmente */
+    align-items: center;
+}
+
+/*---------------------------------------------------------*/
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    height: 100px;
+    align-items: center;
+    background-color: white;
+}
+
+footer p {
+    color: black;
+}
+
+
+------------------------------------------------------
+HTML 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor_header">
+            <img src="imagenes/Logo2.png" alt="">
+            <nav>
+                <ul>
+                    <li><a href="Estructura">Estructura</a></li>
+                    <li><a href="Armonía">Armonía</a></li>
+                    <li><a href="Ritmo">Ritmo</a></li>
+                    <li><a href="Afinación">Afinación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="section_lineas">
+        <div class="para_lineas">
+            <hr> <br> <br>
+            <hr> <br> <br>
+            <hr> <br> <br>
+            <hr> <br> <br>
+            <hr> <br> <br>
+        </div>
+    </section>
+
+
+
+    <section id="html">
+        <div class="html_contenedor">
+            <div class="textos_html">
+                <h2><a href="HTML">HTML <br> Como Estructura</a></h2>
+                <p>En la música, una partitura marca la base: las notas, los compases, la métrica. <br> No
+                    tiene adornos, pero define qué se toca y cuándo. <br>
+                    De la misma forma, HTML es el esqueleto de una página web: <br> define la jerarquía de títulos, párrafos,
+                    secciones y enlaces. <br>
+                    ➡️ Así como un músico necesita una buena partitura para que la interpretación tenga sentido, <br> un
+                    desarrollador necesita un HTML limpio, semántico y ordenado para que la web sea clara, accesible y
+                    fácil de mantener.</p>
+            </div>
+            <div>
+                <img src="imagenes/html.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="css">
+        <div class="contenedor_css">
+        </div>
+        <div>
+            <h2> <a href="css">CSS como armonía y estilo</a></h2>
+        </div>
+        <div>
+            <img src="imagenes/css.jpeg" alt="">
+        </div>
+        <div>
+            <p class="texto_css"> Si HTML es la partitura, el CSS es la interpretación con matices: la elección del
+                tempo, la dinámica (piano, forte), la expresividad y el color sonoro de un instrumento.
+                CSS trae la armonía visual, define colores, tipografías, tamaños y distribuciones que convierten un
+                simple esqueleto en una experiencia estética.
+
+                ➡️ Así como una melodía cambia totalmente si se toca con un violín suave o con una batería estridente,
+                un sitio web cambia radicalmente según los estilos de CSS aplicados. Es la personalidad y la emoción
+                visual de tu página.
+            </p>
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="javascript">
+        <div class="contenedor_javascript">
+            <div>
+                <h2><a href="JavaScript">JavaScript <br> Como Ritmo y Funcionalidad</a></h2>
+
+            </div>
+            <div>
+                <img src="imagenes/JavaScript.jpeg" alt="">
+            </div>
+            <div>
+                <p class="texto_javascript"> En la música, el ritmo y la percusión aportan movimiento y hacen que la
+                    obra avance.
+                    En programación, JavaScript (y también Java en ciertos contextos) cumplen ese papel: agregan la
+                    interactividad que mantiene viva la experiencia del usuario.
+                    ➡️ Botones que responden, menús dinámicos, animaciones que fluyen, validación de formularios… todo
+                    eso es el “pulso” que da vida a una página.
+                    Así como un metrónomo marca el compás y da coherencia al ensamble, el código aporta lógica y
+                    dinamismo.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="qa">
+
+        <div class="contenedor_qa">
+            <div>
+                <h2>
+                    <a href="QA Como Afinación">QA Como Afinación</a>
+                </h2>
+            </div>
+            <div>
+                <img src="imagenes/css.jpeg" alt="">
+            </div>
+            <div>
+                <p class="texto_qa"> Un instrumento puede estar afinado técnicamente, pero si no se revisa antes de
+                    tocar, puede sonar desagradable.
+                    El QA (Quality Assurance) en programación es exactamente eso: afinar el código antes de ponerlo en
+                    escena.
+                    ➡️ Revisar errores, probar funcionalidades, asegurar compatibilidad en diferentes dispositivos y
+                    navegadores es como afinar cada cuerda antes del concierto.
+                    Una página puede “funcionar” sin QA, pero al igual que una orquesta desafinada, no transmitirá la
+                    calidad ni la emoción que debería.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+    </footer>
+
+
+</body>
+
+</html>
