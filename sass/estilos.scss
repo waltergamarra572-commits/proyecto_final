@@ -1,3 +1,5 @@
+@use"utilidades/variables" as *;
+
 body {
     margin: 0;
     background: #000;
@@ -10,7 +12,7 @@ header div {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 50px;
+    padding: 0 50px;
 }
 
 header img {
@@ -22,8 +24,6 @@ header nav ul {
     gap: 30px;
     list-style: none;
     margin: 0;
-    padding-right: 50px;
-
 }
 
 header nav ul a {
@@ -41,13 +41,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5vw 10vw;
+    padding: 0 10vw;
 
 }
 
 h1 {
     position: absolute;
-    top: 20vh;
     left: 18vw;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
@@ -157,15 +156,11 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-size: 12pt;
     font-weight: 400;
-    line-height: 1.5;
 }
 
 .html_contenedor {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 50px;
+    @include grid_mobile;
     background-color: tomato;
-
 }
 
 .textos_html {
@@ -179,17 +174,14 @@ p {
 }
 
 .img_html {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
+    @include img;
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-desktop){
     .html_contenedor {
-        display: flex;
-        flex-direction: row-reverse;
+        @include flex_desktop;
+        background-color:blue;
     }
 
     .img_html img {
@@ -197,11 +189,8 @@ p {
     }
 
     .textos_html {
-        align-items: center;
-        align-content: center;
-        text-align: left;
-        padding-right: 50px;
-        padding-left: 50px;
+        @include texto_desktop;
+       
     }
 }
 
@@ -210,11 +199,9 @@ p {
 
 
 .contenedor_css {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 50px;
-    background-color: green;
+    @include grid_mobile;
+    background-color: #FF0707;
+
 }
 
 .texto_css {
@@ -225,18 +212,19 @@ p {
 }
 
 .img_css img {
-    width: 80%;
+    width: 100%;
 }
 
 .img_css {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    @include img;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-desktop) {
     .contenedor_css {
         display: flex;
+        background-color: green;
+                height: 600px;
+
     }
 
     .img_css img {
@@ -244,19 +232,15 @@ p {
     }
 
     .texto_css {
-        text-align: left;
-        padding-right: 50px;
-        padding-left: 50px;
+        @include texto_desktop;
     }
 }
 
 /*------------------------------------------------*/
 
 .contenedor_javascript {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 50px;
-    background-color: aqua;
+    @include grid_mobile;
+background-color: #07CDFF;
 
 }
 
@@ -268,19 +252,20 @@ p {
 }
 
 .img_javascript img {
-    width: 80%;
+    width: 100%;
 }
 
 .img_javascript {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    @include img
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-desktop) {
     .contenedor_javascript {
         display: flex;
         flex-direction: row-reverse;
+        background-color: #FF079C;
+                height: 600px;
+
     }
 
     .img_javascript img {
@@ -288,9 +273,7 @@ p {
     }
 
     .texto_javascript {
-        text-align: left;
-        padding-right: 50px;
-        padding-left: 50px;
+        @include texto_desktop;
     }
 
 }
@@ -299,10 +282,7 @@ p {
 
 /*------------------------------------------------*/
 .contenedor_qa {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 50px;
-    background-color: blue;
+    @include grid_mobile;
 }
 
 .texto_qa {
@@ -313,29 +293,29 @@ p {
 }
 
 .img_qa img {
-    width: 80%;
+    width: 100%;
 }
 
 .img_qa {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    @include img;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-desktop) {
     .contenedor_qa {
         display: flex;
+        background-color: tomato;
+        height: 600px;
     }
 
     .img_qa img {
         width: 600px;
     }
-
-    .texto_qa {
+    
+    .texto_qa{
         text-align: left;
-        padding-right: 50px;
-
+        
     }
+
 
 
 }

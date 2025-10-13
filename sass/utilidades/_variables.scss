@@ -1,0 +1,39 @@
+//mixin sin paramentros
+
+@mixin  grid_mobile{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px;
+    gap: 20px;
+
+}
+
+@mixin flex_desktop{
+    $breakpoint-desktop: 768px;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 600px;
+}
+@mixin flex_desktop2{
+    display: flex;
+    height: 600px;
+    $breakpoint-desktop: 768px;
+
+}
+
+@mixin texto_desktop{
+    text-align: left;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+@mixin img{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+$breakpoint-desktop: 768px;
+
+
+
+
