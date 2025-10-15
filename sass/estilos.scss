@@ -2,23 +2,22 @@
 
 body {
     margin: 0;
-    background: #000;
+    background: black;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
 }
-
 header div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 0 50px;
+    padding: 0 20px;
+   // padding: 0 50px;
+    background-color: tomato;
 }
 
 header img {
     width: 15%;
 }
-
 header nav ul {
     display: flex;
     gap: 30px;
@@ -26,10 +25,12 @@ header nav ul {
     margin: 0;
 }
 
+
 header nav ul a {
     text-decoration: none;
     color: whitesmoke;
-    font-size: 15px;
+    font-size: $tamano_parrafo; // aqui
+    font-weight: $peso_desktop;
 }
 
 
@@ -44,21 +45,35 @@ main {
     padding: 0 10vw;
 
 }
+h1 {
+    position: absolute;
+    top: 15%;
+    left: 18vw;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 50pt;       /* antes 70pt */
+    line-height: 1.14;     /* antes 1.18 */
+    color: #fff;
+    margin: 0;
+    z-index: 9999;
+}
 
+/*
 h1 {
     position: absolute;
     left: 18vw;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    /* Regular */
+    /* Regular 
     font-size: 70pt;
     line-height: 1.18;
     color: #fff;
-    /* podés cambiarlo si querés */
+    /* podés cambiarlo si querés 
     margin: 0;
     z-index: 9999;
-}
+}*/
 
 svg {
     position: absolute;
@@ -144,38 +159,51 @@ svg {
 
 
 /*------------------------------------------------*/
-@media (min-width: 768px) {
+ /*
     h2 {
         font-family: 'Montserrat', sans-serif;
         font-size: 50pt;
         font-weight: 400;
     }
-}
+
 
 p {
     font-family: 'Montserrat', sans-serif;
     font-size: 12pt;
     font-weight: 400;
-}
+} */
 
 .html_contenedor {
     @include grid_mobile;
-    background-color: tomato;
 }
 
 .textos_html {
-    color: white;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
 }
+.textos_html h2{
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $h2_mobile;
+    
 
 
+    color: yellowgreen;
+}
+.textos_html p{
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    color: black;
+
+}
 .img_html img {
     width: 100%;
+    padding-right: 55px
 }
-
 .img_html {
     @include img;
-
 }
 
 @media (min-width: $breakpoint-desktop){
@@ -188,11 +216,22 @@ p {
         width: 600px;
     }
 
-    .textos_html {
+    .textos_html p{
         @include texto_desktop;
-       
-    }
+  font-family: $fuente_desktop;
+  font-size: $parrafo_desktop;
+  font-weight: $peso_desktop;
+
 }
+
+    }
+        .textos_html h2{
+            @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $tamano_h2;
+        font-weight: $peso_desktop;
+        }
+
 
 
 /*------------------------------------------------*/
@@ -201,24 +240,17 @@ p {
 .contenedor_css {
     @include grid_mobile;
     background-color: #FF0707;
-
 }
 
 .texto_css {
-    color: white;
-    text-align: center;
-    align-items: center;
-    align-content: center;
+    @include textos_mobile;
 }
-
 .img_css img {
     width: 100%;
 }
-
 .img_css {
     @include img;
 }
-
 @media (min-width: $breakpoint-desktop) {
     .contenedor_css {
         display: flex;
@@ -231,9 +263,23 @@ p {
         width: 600px;
     }
 
-    .texto_css {
+    .texto_css p {
         @include texto_desktop;
+         font-family: $fuente_desktop;
+  font-size: $parrafo_desktop;
+  font-weight: $peso_desktop;
+
+  
+
+  
     }
+        .texto_css h2{
+            @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $tamano_h2;
+        font-weight: $peso_desktop;
+        }
+
 }
 
 /*------------------------------------------------*/
@@ -272,10 +318,21 @@ background-color: #07CDFF;
         width: 600px;
     }
 
-    .texto_javascript {
+    .texto_javascript p {
         @include texto_desktop;
-    }
+        font-family: $fuente_desktop;
+        font-size: $parrafo_desktop;
+        font-weight: $peso_desktop;
 
+        
+    }
+    .texto_javascript h2{
+
+             @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $tamano_h2;
+        font-weight: $peso_desktop;
+        }
 }
 
 
@@ -311,10 +368,19 @@ background-color: #07CDFF;
         width: 600px;
     }
     
-    .texto_qa{
-        text-align: left;
-        
+    .texto_qa p{
+        @include texto_desktop;  
+        font-family: $fuente_desktop;
+        font-size: $parrafo_desktop;
+        font-weight: $peso_desktop;
     }
+    .texto_qa h2{
+        @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $tamano_h2;
+        font-weight: $peso_desktop;
+
+        }
 
 
 

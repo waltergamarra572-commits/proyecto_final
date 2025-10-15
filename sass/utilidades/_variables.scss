@@ -5,7 +5,7 @@
     grid-template-columns: 1fr;
     padding: 50px;
     gap: 20px;
-
+    background-color: blue;
 }
 
 @mixin flex_desktop{
@@ -18,21 +18,46 @@
     display: flex;
     height: 600px;
     $breakpoint-desktop: 768px;
-
 }
-
+//textos/desktop
 @mixin texto_desktop{
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
 }
-@mixin img{
+$breakpoint-desktop: 768px;
+$fuente_desktop: 'Montserrat', sans-serif;//fuente parrafo
+$parrafo_desktop: 12pt; //tamaño p
+$tamano_h2: 50pt;// tamaño h2
+$peso_desktop: 400; //peso
+
+//textos mobile
+@mixin grid_textos{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+$breakpoint-mobile: 480px;
+
+$h2_mobile:32pt;//h2
+$tamano_parrafo:11pt;//p
+
+
+
+
+@mixin img{ //desktop
     display: flex;
     align-content: center;
     justify-content: center;
 }
+@mixin textos_mobile{
+    color: white;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
 
-$breakpoint-desktop: 768px;
+
 
 
 

@@ -1,9 +1,8 @@
 @charset "UTF-8";
 body {
   margin: 0;
-  background: #000;
+  background: black;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
 }
 
 header div {
@@ -11,7 +10,8 @@ header div {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 0 50px;
+  padding: 0 20px;
+  background-color: tomato;
 }
 
 header img {
@@ -28,7 +28,8 @@ header nav ul {
 header nav ul a {
   text-decoration: none;
   color: whitesmoke;
-  font-size: 15px;
+  font-size: 11pt;
+  font-weight: 400;
 }
 
 /* ---------------------------------------------------- */
@@ -43,19 +44,33 @@ main {
 
 h1 {
   position: absolute;
+  top: 15%;
   left: 18vw;
   text-align: left;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  /* Regular */
-  font-size: 70pt;
-  line-height: 1.18;
+  font-size: 50pt; /* antes 70pt */
+  line-height: 1.14; /* antes 1.18 */
   color: #fff;
-  /* podés cambiarlo si querés */
   margin: 0;
   z-index: 9999;
 }
 
+/*
+h1 {
+    position: absolute;
+    left: 18vw;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    /* Regular 
+    font-size: 70pt;
+    line-height: 1.18;
+    color: #fff;
+    /* podés cambiarlo si querés 
+    margin: 0;
+    z-index: 9999;
+}*/
 svg {
   position: absolute;
   top: 0;
@@ -139,34 +154,52 @@ svg {
 }
 
 /*------------------------------------------------*/
-@media (min-width: 768px) {
-  h2 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 50pt;
-    font-weight: 400;
-  }
-}
-p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12pt;
-  font-weight: 400;
-}
+/*
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 50pt;
+        font-weight: 400;
+    }
 
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+} */
 .html_contenedor {
   display: grid;
   grid-template-columns: 1fr;
   padding: 50px;
   gap: 20px;
-  background-color: tomato;
+  background-color: blue;
 }
 
 .textos_html {
-  color: white;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.textos_html h2 {
   text-align: center;
+  align-items: center;
+  align-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32pt;
+  color: yellowgreen;
+}
+
+.textos_html p {
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  color: black;
 }
 
 .img_html img {
   width: 100%;
+  padding-right: 55px;
 }
 
 .img_html {
@@ -185,18 +218,31 @@ p {
   .img_html img {
     width: 600px;
   }
-  .textos_html {
+  .textos_html p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
   }
 }
+.textos_html h2 {
+  text-align: left;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50pt;
+  font-weight: 400;
+}
+
 /*------------------------------------------------*/
 .contenedor_css {
   display: grid;
   grid-template-columns: 1fr;
   padding: 50px;
   gap: 20px;
+  background-color: blue;
   background-color: #FF0707;
 }
 
@@ -226,10 +272,21 @@ p {
   .img_css img {
     width: 600px;
   }
-  .texto_css {
+  .texto_css p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+  }
+  .texto_css h2 {
+    text-align: left;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50pt;
+    font-weight: 400;
   }
 }
 /*------------------------------------------------*/
@@ -238,6 +295,7 @@ p {
   grid-template-columns: 1fr;
   padding: 50px;
   gap: 20px;
+  background-color: blue;
   background-color: #07CDFF;
 }
 
@@ -268,10 +326,21 @@ p {
   .img_javascript img {
     width: 600px;
   }
-  .texto_javascript {
+  .texto_javascript p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+  }
+  .texto_javascript h2 {
+    text-align: left;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50pt;
+    font-weight: 400;
   }
 }
 /*------------------------------------------------*/
@@ -280,6 +349,7 @@ p {
   grid-template-columns: 1fr;
   padding: 50px;
   gap: 20px;
+  background-color: blue;
 }
 
 .texto_qa {
@@ -308,8 +378,21 @@ p {
   .img_qa img {
     width: 600px;
   }
-  .texto_qa {
+  .texto_qa p {
     text-align: left;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+  }
+  .texto_qa h2 {
+    text-align: left;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50pt;
+    font-weight: 400;
   }
 }
 /*---------------------------------------------------------*/
