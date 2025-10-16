@@ -16,6 +16,11 @@ body {
   width: 200px;
 }
 
+@media (max-width: 480px) {
+  .navbar-brand img {
+    width: 90px;
+  }
+}
 .navbar-toggler {
   border: none;
   background-color: #FFF707;
@@ -492,4 +497,62 @@ footer .coded {
 footer .coded strong {
   color: #4da3ff;
 }
+
+/* Botón sticky */
+#btnVolverArriba {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #4DA3FF;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#btnVolverArriba:hover {
+  background-color: #1e8cff;
+  transform: translateY(-3px);
+}
+
+/* Estado visible */
+#btnVolverArriba.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 480px) {
+  #btnVolverArriba {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 30%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    /* <-- ajustá este valor para pegarlo más al borde */
+    z-index: 1000;
+    color: black;
+  }
+  #btnVolverArriba::after {
+    content: "↑";
+  }
+  /* ocultar texto si tuviera */
+  #btnVolverArriba span {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=estilos.css.map */
