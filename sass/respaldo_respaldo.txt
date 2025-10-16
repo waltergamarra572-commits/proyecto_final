@@ -1,0 +1,484 @@
+@use"utilidades/variables" as *;
+
+body {
+    margin: 0;
+    background: black;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 0.8rem 1.5rem;
+    position: sticky;
+}
+
+.navbar-brand img {
+    width: 200px;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: #FFF707;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Animación suave del menú */
+.navbar-collapse.collapse {
+    transition: all 0.4s ease;
+}
+
+.navbar-collapse.show {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        background: #666;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+
+
+
+/* Estilo de los enlaces del menú */
+
+
+/* ---------------------------------------------------- */
+
+main {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10vw;
+
+}
+
+h1 {
+    position: absolute;
+    top: 15%;
+    left: 18vw;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 50pt;
+    /* antes 70pt */
+    line-height: 1.14;
+    /* antes 1.18 */
+    color: #fff;
+    margin: 0;
+    z-index: 9999;
+}
+
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.line {
+    fill: none;
+    stroke-width: 1.5;
+    opacity: 0.7;
+}
+
+.l1 {
+    stroke: #FF079C;
+}
+
+.l2 {
+    stroke: #FF0707;
+}
+
+.l3 {
+    stroke: #FFF707;
+}
+
+.l4 {
+    stroke: #FF079C;
+}
+
+.l5 {
+    stroke: #07CDFF;
+}
+
+.tag {
+    position: absolute;
+    background: #000;
+    font-family: monospace;
+    font-size: 0.9rem;
+    padding: 0.2em 0.4em;
+    color: #fff;
+    opacity: 0.85;
+    z-index: 2;
+}
+
+/* Posiciones exactas */
+.t1 {
+    top: 13.5%;
+    left: 8%;
+}
+
+.t2 {
+    top: 26%;
+    right: 10%;
+}
+
+.t3 {
+    top: 39%;
+    right: 18%;
+}
+
+.t4 {
+    top: 51%;
+    right: 5%;
+}
+
+.t5 {
+    top: 51%;
+    left: 50%;
+}
+
+.t6 {
+    top: 63.5%;
+    right: 40%;
+}
+
+.t7 {
+    top: 63.5%;
+    right: 8%;
+}
+
+.html_contenedor {
+    @include grid_mobile;
+}
+
+.textos_html {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.textos_html h2 {
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $h2_mobile;
+    text-align: center;
+}
+
+.textos_html p {
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $tamano_parrafo;
+}
+
+.img_html img {
+    width: 100%;
+}
+
+.img_html {
+    @include img;
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .html_contenedor {
+        @include flex_desktop;
+    }
+
+    .img_html img {
+        width: 600px;
+    }
+
+    .textos_html p {
+        @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $parrafo_desktop;
+        font-weight: $peso_desktop;
+
+    }
+
+
+    .textos_html h2 {
+        @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $tamano_h2;
+        font-weight: $peso_desktop;
+    }
+}
+/*------------------------------------------------*/
+.contenedor_css {
+    @include grid_mobile;
+}
+
+.texto_css {
+    @include textos_mobile;
+}
+
+.img_css img {
+    width: 100%;
+}
+
+.img_css {
+    @include img;
+}
+
+.texto_css h2 {
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $h2_mobile;
+    text-align: center;
+}
+.textos_css p {
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $tamano_parrafo;
+}
+@media (min-width: $breakpoint-desktop) {
+    .contenedor_css {
+        display: flex;
+        height: 600px;
+    }
+    .img_css img {
+        width: 600px;
+    }
+    .texto_css p {
+        @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $parrafo_desktop;
+        font-weight: $peso_desktop;
+    }
+    .texto_css h2 {
+        @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $tamano_h2;
+        font-weight: $peso_desktop;
+    }
+}
+/*------------------------------------------------*/
+
+.contenedor_javascript {
+    @include grid_mobile;
+}
+.texto_javascript {
+    color: white;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.texto_javascript h2 {
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $h2_mobile;
+    text-align: center;
+}
+.texto_javascript p {
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $tamano_parrafo;
+}
+.img_javascript img {
+    width: 100%;
+}
+.img_javascript {
+    @include img
+}
+@media (min-width: $breakpoint-desktop) {
+    .contenedor_javascript {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 600px;
+    }
+    .img_javascript img {
+        width: 600px;
+    }
+    .texto_javascript p {
+        @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $parrafo_desktop;
+        font-weight: $peso_desktop;
+    }
+    .texto_javascript h2 {
+        @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $tamano_h2;
+        font-weight: $peso_desktop;
+    }
+}
+/*------------------------------------------------*/
+.contenedor_qa {
+    @include grid_mobile;
+}
+.texto_qa {
+    color: white;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.texto_qa h2 {
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $h2_mobile;
+    text-align: center;
+}
+.texto_qa p {
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $tamano_parrafo;
+}
+.img_qa img {
+    width: 100%;
+}
+.img_qa {
+    @include img;
+}
+@media (min-width: $breakpoint-desktop) {
+    .contenedor_qa {
+        display: flex;
+        height: 600px;
+    }
+    .img_qa img {
+        width: 600px;
+    }
+    .texto_qa p {
+        @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $parrafo_desktop;
+        font-weight: $peso_desktop;
+    }
+    .texto_qa h2 {
+        @include texto_desktop;
+        font-family: $fuente_desktop;
+        font-size: $tamano_h2;
+        font-weight: $peso_desktop;
+    }
+}
+/*---------------------------------------------------------*/
+.logo-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 60px 0;
+}
+.logo-slider .slide-track {
+    display: flex;
+    animation: scroll 25s linear infinite;
+    width: calc(200px * 14);
+}
+.logo-slider .slide {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+.logo-slider img {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s;
+}
+.logo-slider img:hover {
+    transform: scale(1.1);
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 7));
+    }
+}
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    margin-top: 2rem;
+}
+.contact-section {
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1s ease forwards;
+}
+.contact-section h2 {
+    font-size: 1.6rem;
+    color: #4da3ff;
+    margin-bottom: 0.3rem;
+}
+.contact-section .phone {
+    font-size: 1rem;
+    color: #ccc;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-bottom: 1.2rem;
+    animation: fadeIn 1.2s ease forwards;
+}
+.social-icons a {
+    color: #eee;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+.fa-linkedin:hover {
+    color: #0a66c2;
+}
+.fa-behance:hover {
+    color: #1769ff;
+}
+.fa-envelope:hover {
+    color: #ff5555;
+}
+.coded {
+    font-size: 0.9rem;
+    color: #bbb;
+    animation: fadeIn 1.5s ease forwards;
+}
+.coded strong {
+    color: #4da3ff;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
