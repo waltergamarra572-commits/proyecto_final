@@ -1,0 +1,14 @@
+# Archivo robots.txt para Walter Gamarra Portfolio
+# Controla el acceso de los robots de búsqueda y referencia el sitemap
+
+User-agent: *
+Allow: /
+
+# Evita que indexen archivos internos o privados
+Disallow: /css/
+Disallow: /imagenes/
+Disallow: /js/
+Disallow: /fonts/
+
+# Mapa del sitio
+Sitemap: https://waltergamarra572-commits.github.io/proyecto_final/sitemap.xml
