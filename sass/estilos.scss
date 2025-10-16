@@ -5,6 +5,7 @@ body {
     background: black;
     color: #fff;
 }
+/*
 header div {
     display: flex;
     justify-content: space-between;
@@ -12,7 +13,6 @@ header div {
     height: 100%;
     padding: 0 20px;
    // padding: 0 50px;
-    background-color: tomato;
 }
 
 header img {
@@ -32,6 +32,65 @@ header nav ul a {
     font-size: $tamano_parrafo; // aqui
     font-weight: $peso_desktop;
 }
+/* */
+/* ====== NAVBAR PERSONALIZADO ====== */
+
+.navbar {
+      background-color: #000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 0.8rem 1.5rem;
+      position: sticky;    }
+
+    .navbar-brand img{
+        width: 200px;
+    }
+
+    .navbar-toggler {
+      border: none;
+      background-color: #FFF707;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    /* Animación suave del menú */
+    .navbar-collapse.collapse {
+      transition: all 0.4s ease;
+    }
+
+    .navbar-collapse.show {
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav-link {
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #007bff;
+    }
+
+    @media (max-width: 991px) {
+      .navbar-nav {
+        background: #666;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+    }
+
+
+
+
+
+/* Estilo de los enlaces del menú */
 
 
 /* ---------------------------------------------------- */
@@ -178,29 +237,24 @@ p {
 }
 
 .textos_html {
+    text-align: center;
     justify-content: center;
     align-items: center;
-    padding-right: 50px;
 }
 .textos_html h2{
     @include grid_textos;
     font-family: $fuente_desktop;
     font-size: $h2_mobile;
-    
-
-
-    color: yellowgreen;
+    text-align: center;
 }
 .textos_html p{
-    justify-content: center;
-    text-align: center;
-    align-content: center;
-    color: black;
-
+        @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size:$tamano_parrafo;
 }
+
 .img_html img {
     width: 100%;
-    padding-right: 55px
 }
 .img_html {
     @include img;
@@ -209,7 +263,6 @@ p {
 @media (min-width: $breakpoint-desktop){
     .html_contenedor {
         @include flex_desktop;
-        background-color:blue;
     }
 
     .img_html img {
@@ -224,22 +277,20 @@ p {
 
 }
 
-    }
+    
         .textos_html h2{
             @include texto_desktop;
         font-family: $fuente_desktop;
         font-size: $tamano_h2;
         font-weight: $peso_desktop;
         }
-
-
+    }
 
 /*------------------------------------------------*/
 
 
 .contenedor_css {
     @include grid_mobile;
-    background-color: #FF0707;
 }
 
 .texto_css {
@@ -251,10 +302,21 @@ p {
 .img_css {
     @include img;
 }
+.texto_css h2{
+@include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $h2_mobile;
+    text-align: center;
+}
+.textos_css p{
+        @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size:$tamano_parrafo;
+}
+
 @media (min-width: $breakpoint-desktop) {
     .contenedor_css {
         display: flex;
-        background-color: green;
                 height: 600px;
 
     }
@@ -286,7 +348,6 @@ p {
 
 .contenedor_javascript {
     @include grid_mobile;
-background-color: #07CDFF;
 
 }
 
@@ -295,6 +356,17 @@ background-color: #07CDFF;
     text-align: center;
     align-items: center;
     align-content: center;
+}
+.texto_javascript h2{
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $h2_mobile;
+    text-align: center;
+}
+.texto_javascript p{
+        @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size:$tamano_parrafo;
 }
 
 .img_javascript img {
@@ -309,7 +381,6 @@ background-color: #07CDFF;
     .contenedor_javascript {
         display: flex;
         flex-direction: row-reverse;
-        background-color: #FF079C;
                 height: 600px;
 
     }
@@ -348,6 +419,17 @@ background-color: #07CDFF;
     align-items: center;
     align-content: center;
 }
+.texto_qa h2{
+    @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size: $h2_mobile;
+    text-align: center;
+}
+.texto_qa p{
+        @include grid_textos;
+    font-family: $fuente_desktop;
+    font-size:$tamano_parrafo;
+}
 
 .img_qa img {
     width: 100%;
@@ -360,7 +442,6 @@ background-color: #07CDFF;
 @media (min-width: $breakpoint-desktop) {
     .contenedor_qa {
         display: flex;
-        background-color: tomato;
         height: 600px;
     }
 
@@ -432,16 +513,76 @@ background-color: #07CDFF;
 }
 
 
-footer {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+     footer {
+      background-color: #000;
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem;
+      margin-top: 2rem;
+    }
 
-    height: 100px;
-    align-items: center;
-    background-color: black;
-}
+    .contact-section {
+      margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease forwards;
+    }
 
-footer p {
-    color: white;
-}
+    .contact-section h2 {
+      font-size: 1.6rem;
+      color: #4da3ff;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-section .phone {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.4rem;
+      margin-bottom: 1.2rem;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .social-icons a {
+      color: #eee;
+      font-size: 1.8rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .fa-linkedin:hover {
+      color: #0a66c2;
+    }
+
+    .fa-behance:hover {
+      color: #1769ff;
+    }
+
+    .fa-envelope:hover {
+      color: #ff5555;
+    }
+
+    .coded {
+      font-size: 0.9rem;
+      color: #bbb;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .coded strong {
+      color: #4da3ff;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }

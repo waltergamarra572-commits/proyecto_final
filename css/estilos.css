@@ -5,33 +5,92 @@ body {
   color: #fff;
 }
 
+/*
 header div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  padding: 0 20px;
-  background-color: tomato;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+   // padding: 0 50px;
 }
 
 header img {
-  width: 15%;
+    width: 15%;
+}
+header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
 }
 
-header nav ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
-}
 
 header nav ul a {
-  text-decoration: none;
-  color: whitesmoke;
-  font-size: 11pt;
-  font-weight: 400;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: $tamano_parrafo; // aqui
+    font-weight: $peso_desktop;
+}
+/* */
+/* ====== NAVBAR PERSONALIZADO ====== */
+.navbar {
+  background-color: #000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 0.8rem 1.5rem;
+  position: sticky;
 }
 
+.navbar-brand img {
+  width: 200px;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: #FFF707;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Animación suave del menú */
+.navbar-collapse.collapse {
+  transition: all 0.4s ease;
+}
+
+.navbar-collapse.show {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nav-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    background: #666;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+/* Estilo de los enlaces del menú */
 /* ---------------------------------------------------- */
 main {
   position: relative;
@@ -172,34 +231,35 @@ p {
   grid-template-columns: 1fr;
   padding: 50px;
   gap: 20px;
-  background-color: blue;
 }
 
 .textos_html {
+  text-align: center;
   justify-content: center;
   align-items: center;
-  padding-right: 50px;
 }
 
 .textos_html h2 {
   text-align: center;
   align-items: center;
   align-content: center;
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 32pt;
-  color: yellowgreen;
+  text-align: center;
 }
 
 .textos_html p {
-  justify-content: center;
   text-align: center;
+  align-items: center;
   align-content: center;
-  color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
 }
 
 .img_html img {
   width: 100%;
-  padding-right: 55px;
 }
 
 .img_html {
@@ -213,7 +273,6 @@ p {
     display: flex;
     flex-direction: row-reverse;
     height: 600px;
-    background-color: blue;
   }
   .img_html img {
     width: 600px;
@@ -222,28 +281,27 @@ p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    color: white;
     font-family: "Montserrat", sans-serif;
     font-size: 12pt;
     font-weight: 400;
   }
+  .textos_html h2 {
+    text-align: left;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50pt;
+    font-weight: 400;
+  }
 }
-.textos_html h2 {
-  text-align: left;
-  padding-right: 50px;
-  padding-left: 50px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 50pt;
-  font-weight: 400;
-}
-
 /*------------------------------------------------*/
 .contenedor_css {
   display: grid;
   grid-template-columns: 1fr;
   padding: 50px;
   gap: 20px;
-  background-color: blue;
-  background-color: #FF0707;
 }
 
 .texto_css {
@@ -263,10 +321,28 @@ p {
   justify-content: center;
 }
 
+.texto_css h2 {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32pt;
+  text-align: center;
+}
+
+.textos_css p {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
+}
+
 @media (min-width: 768px) {
   .contenedor_css {
     display: flex;
-    background-color: green;
     height: 600px;
   }
   .img_css img {
@@ -276,6 +352,7 @@ p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    color: white;
     font-family: "Montserrat", sans-serif;
     font-size: 12pt;
     font-weight: 400;
@@ -284,6 +361,7 @@ p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    color: white;
     font-family: "Montserrat", sans-serif;
     font-size: 50pt;
     font-weight: 400;
@@ -295,8 +373,6 @@ p {
   grid-template-columns: 1fr;
   padding: 50px;
   gap: 20px;
-  background-color: blue;
-  background-color: #07CDFF;
 }
 
 .texto_javascript {
@@ -304,6 +380,25 @@ p {
   text-align: center;
   align-items: center;
   align-content: center;
+}
+
+.texto_javascript h2 {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32pt;
+  text-align: center;
+}
+
+.texto_javascript p {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
 }
 
 .img_javascript img {
@@ -320,7 +415,6 @@ p {
   .contenedor_javascript {
     display: flex;
     flex-direction: row-reverse;
-    background-color: #FF079C;
     height: 600px;
   }
   .img_javascript img {
@@ -330,6 +424,7 @@ p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    color: white;
     font-family: "Montserrat", sans-serif;
     font-size: 12pt;
     font-weight: 400;
@@ -338,6 +433,7 @@ p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    color: white;
     font-family: "Montserrat", sans-serif;
     font-size: 50pt;
     font-weight: 400;
@@ -349,7 +445,6 @@ p {
   grid-template-columns: 1fr;
   padding: 50px;
   gap: 20px;
-  background-color: blue;
 }
 
 .texto_qa {
@@ -357,6 +452,25 @@ p {
   text-align: center;
   align-items: center;
   align-content: center;
+}
+
+.texto_qa h2 {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32pt;
+  text-align: center;
+}
+
+.texto_qa p {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
 }
 
 .img_qa img {
@@ -372,7 +486,6 @@ p {
 @media (min-width: 768px) {
   .contenedor_qa {
     display: flex;
-    background-color: tomato;
     height: 600px;
   }
   .img_qa img {
@@ -382,6 +495,7 @@ p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    color: white;
     font-family: "Montserrat", sans-serif;
     font-size: 12pt;
     font-weight: 400;
@@ -390,6 +504,7 @@ p {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    color: white;
     font-family: "Montserrat", sans-serif;
     font-size: 50pt;
     font-weight: 400;
@@ -436,16 +551,77 @@ p {
   }
 }
 footer {
-  display: flex;
-  justify-content: center;
+  background-color: #000;
   text-align: center;
-  height: 100px;
-  align-items: center;
-  background-color: black;
+  padding: 2.5rem 1rem 1.5rem;
+  margin-top: 2rem;
 }
 
-footer p {
-  color: white;
+.contact-section {
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact-section h2 {
+  font-size: 1.6rem;
+  color: #4da3ff;
+  margin-bottom: 0.3rem;
+}
+
+.contact-section .phone {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-bottom: 1.2rem;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.social-icons a {
+  color: #eee;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.fa-linkedin:hover {
+  color: #0a66c2;
+}
+
+.fa-behance:hover {
+  color: #1769ff;
+}
+
+.fa-envelope:hover {
+  color: #ff5555;
+}
+
+.coded {
+  font-size: 0.9rem;
+  color: #bbb;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.coded strong {
+  color: #4da3ff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

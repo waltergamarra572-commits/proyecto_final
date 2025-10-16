@@ -4,28 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-
     <link rel="stylesheet" href="css/estilos.css">
-
-     
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
-    
-
-   
-
     <title>Walter Gamarra Portfolio</title>
 </head>
-
 <body>
     <header>
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="imagenes/Logo2.png" alt="logo"></a>
+      <button
+        class="navbar-toggler ms-auto"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#Estructura">Estructura</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Armonia">Armonía</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Ritmo">Ritmo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Afinacion">Afinación</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!--
         <div class="contenedor_header">
             <img src="imagenes/Logo2.png" alt="Logo de header">
             <nav>
@@ -36,9 +51,9 @@
                     <li><a href="#Afinación">Afinación</a></li>
                 </ul>
             </nav>
-        </div>
+    -->
     </header>
-    
+
     <main>
 
         <svg viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -89,7 +104,7 @@
     </section>
 
 
-    <section id="Armonía">
+    <section id="Armonia">
         <div class="contenedor_css">
             <div class="texto_css">
                 <h2>CSS como armonía y&nbsp;estilo</h2>
@@ -130,7 +145,7 @@
         </div>
     </section>
 
-    <section id="Afinación">
+    <section id="Afinacion">
         <div class="contenedor_qa">
             <div class="texto_qa">
                 <h2>QA Como Afinación</h2>
@@ -204,9 +219,28 @@
 
         </div>
     </div>
+    
     <footer>
-        <p>Todos los derechos reservados</p>
-    </footer>
+    <div class="contact-section">
+      <h2>Trabajemos juntos</h2>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/waltergamarra/" target="_blank" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://www.behance.net/waltergamarra4" target="_blank" aria-label="Behance">
+        <i class="fa-brands fa-behance"></i>
+      </a>
+      <a href="mailto:waltergamarra572@gmail.com" target="_blank" aria-label="Email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+
+    <p class="coded">
+        © 2025 — Todos los derechos reservados.💻 Codeado por <strong>Walter Gamarra</strong></p>
+</footer>
+
     <script>
         // === ENTRADAS ANIMADAS ===
         gsap.from("h1 span", {
@@ -258,6 +292,8 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+      
 </body>
 
 </html>
